@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
+        <element label="New field 1" max_length="40" name="new_field_1" type="integer"/>
+        <element choice="1" display="true" label="New field 2" max_length="40" name="new_field_2new_field_2" type="integer">
+            <choice/>
+        </element>
+        <element label="New Audio" max_length="40" name="u_audio_2" type="audio"/>
+        <element label="Active" max_length="40" name="u_boolean_1" type="boolean"/>
+        <element label="New Date/Time" max_length="40" name="u_glide_date_time_4" type="glide_date_time"/>
+        <element label="New field 1 type" max_length="40" name="u_integer_1" type="integer"/>
+        <element label="New Reference" max_length="32" name="u_reference_5" reference="cmdb_ci_appl_dot_net" type="reference"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="[legal]" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Human Resources" sequence="0" value="[hr]"/>
+                <element label="Facilities" sequence="1" value="[facilities]"/>
+                <element label="Legal" sequence="2" value="[legal]"/>
+                <element label="Your Department Choice" sequence="3" value="[your_choice]"/>
+            </choice>
+        </element>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
